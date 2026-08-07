@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HomeBase by Casa Health — Your home, maintained</title>
-<meta name="description" content="HomeBase is a fully offline Android home-maintenance tracker built around a 3D model of your home. No account, no server, no tracking — your data never leaves your device.">
+<title>Casa Health — offline apps for looking after your home</title>
+<meta name="description" content="Casa Health builds fully offline Android home-maintenance apps. No account, no server, no tracking — your data never leaves your device.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A1%3C/text%3E%3C/svg%3E">
 </head>
@@ -14,9 +14,8 @@
   <div class="wrap">
     <nav>
       <a class="brand" href="index.html"><span class="logo">🏡</span>Casa Health</a>
-      <a class="link" href="#model">How it works</a>
-      <a class="link" href="usage.html">Usage guide</a>
-      <a class="link" href="privacy.html">Privacy</a>
+      <a class="link" href="#apps">Apps</a>
+      <a class="link" href="#promise">Our promise</a>
       <a class="link" href="support.html">Support</a>
     </nav>
   </div>
@@ -24,20 +23,18 @@
     <div class="wrap">
       <h1>Your home, maintained.</h1>
       <p class="lede">
-        HomeBase turns a 3D model of your actual home into a living maintenance
-        schedule. Every appliance, system, structural asset, and vehicle you own carries its
-        own seasonal tasks, lifespan rating, and upkeep status — so nothing expensive ever
-        sneaks up on you.
+        Casa Health builds Android apps that help you look after what you own — turning the
+        things in your home into a living maintenance schedule, so nothing expensive ever
+        sneaks up on you. Every app we publish runs entirely on your device.
       </p>
       <div class="cta">
-        <a class="btn primary" href="usage.html">Read the usage guide</a>
-        <a class="btn ghost" href="privacy.html">Our privacy promise</a>
+        <a class="btn primary" href="#apps">See the apps</a>
+        <a class="btn ghost" href="#promise">Our privacy promise</a>
       </div>
       <div class="chips">
         <span class="chip">100% offline</span>
         <span class="chip">No account</span>
         <span class="chip">No ads or tracking</span>
-        <span class="chip">Android 7.0+</span>
       </div>
     </div>
   </div>
@@ -45,31 +42,47 @@
 
 <main>
 
-  <section id="model">
+  <section id="apps">
     <div class="wrap">
-      <span class="kicker">The usage model</span>
+      <span class="kicker">The apps</span>
       <p class="sub">
-        You don't fill out forms about your house — you <em>build</em> it. The maintenance
-        hub watches what exists and schedules only that. Add a pool, and pool tasks appear.
-        Remove the deck, and deck tasks disappear. Park a car, and oil changes join the list.
+        Each app has its own usage guide and its own privacy policy. They are separate apps
+        with separate policies — read the one that belongs to the app you installed.
       </p>
-      <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <h3>Claim your home from the neighborhood</h3>
+      <div class="grid">
+
+        <div class="card">
+          <span class="icon">🏡</span>
+          <h3>HomeBase</h3>
+          <p>
+            A home-maintenance tracker built around a 3D model of your actual home. You don't
+            fill out forms about your house — you build it, and the checklist writes itself.
+            Appliances, systems, structural assets and vehicles each carry their own seasonal
+            tasks, lifespan rating and upkeep status.
+          </p>
+          <p><strong>Requires Android 8.0 or newer.</strong> Includes a one-time in-app
+             purchase to unlock premium features.</p>
+          <p>
+            <a href="homebase/usage.html">Usage guide</a> ·
+            <a href="homebase/privacy.html">Privacy policy</a>
+          </p>
         </div>
-        <div class="step">
-          <div class="num">2</div>
-          <h3>Make it yours with modifications to the 3D model</h3>
+
+        <div class="card">
+          <span class="icon">🧰</span>
+          <h3>HomeHealth</h3>
+          <p>
+            A separately published Casa Health maintenance app, built on the same offline
+            model: a maintenance hub that tracks what you actually own and schedules the
+            seasonal work it needs, with lifespan and upkeep shown side by side.
+          </p>
+          <p><strong>Requires Android 7.0 or newer.</strong> No in-app purchases.</p>
+          <p>
+            <a href="homehealth/usage.html">Usage guide</a> ·
+            <a href="homehealth/privacy.html">Privacy policy</a>
+          </p>
         </div>
-        <div class="step">
-          <div class="num">3</div>
-          <h3>The task checklist writes itself</h3>
-        </div>
-        <div class="step">
-          <div class="num">4</div>
-          <h3>Maintain it with proper seasonal reminders</h3>
-        </div>
+
       </div>
     </div>
   </section>
@@ -80,7 +93,7 @@
       <p class="sub">
         Every tracked item shows two badges that answer two different questions. A water
         heater can be well within its lifespan while its annual flush is a year overdue —
-        HomeBase shows you both, side by side.
+        our apps show you both, side by side.
       </p>
       <div class="signals">
         <div class="signal">
@@ -103,58 +116,11 @@
     </div>
   </section>
 
-  <section>
+  <section class="privacy-band" id="promise">
     <div class="wrap">
-      <span class="kicker">The maintenance hub</span>
-      <div class="grid">
-        <div class="card">
-          <span class="icon">✅</span>
-          <h3>To-Dos</h3>
-        </div>
-        <div class="card">
-          <span class="icon">📋</span>
-          <h3>Everything tracked, grouped by what matters.</h3>
-        </div>
-        <div class="card">
-          <span class="icon">🚗</span>
-          <h3>Even vehicles get their own maintenance card and tasks.</h3>
-        </div>
-        <div class="card">
-          <span class="icon">🛠️</span>
-          <h3>Step-by-step DIY repair guides.</h3>
-        </div>
-        <div class="card">
-          <span class="icon">📇</span>
-          <h3>Private Contact List of Pros</h3>
-        </div>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="wrap">
-      <span class="kicker">Requirements</span>
+      <span class="kicker" style="color:#8fd0ae">Our promise</span>
       <p class="sub">
-        No cloud dependency and no minimum-spec surprise — HomeBase is built to run
-        entirely on-device.
-      </p>
-      <div class="grid">
-        <div class="card">
-          <span class="icon">🤖</span>
-          <h3>Android 7.0+</h3>
-        </div>
-        <div class="card">
-          <span class="icon">📶</span>
-          <h3>No internet required</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="privacy-band">
-    <div class="wrap">
-      <span class="kicker" style="color:#8fd0ae">Privacy</span>
-      <p class="sub">
-        HomeBase has no server, so your data has no destination. 
+        Our apps have no server, so your data has no destination.
       </p>
       <div class="stats">
         <div class="stat"><b>0</b><span>accounts or sign-ins</span></div>
@@ -162,7 +128,11 @@
         <div class="stat"><b>0</b><span>ads, analytics, or trackers</span></div>
         <div class="stat"><b>1</b><span>place your data lives: your device</span></div>
       </div>
-      <a class="btn primary" href="privacy.html">Read the full privacy policy</a>
+      <p class="sub" style="margin-top:28px">
+        Each app states this in its own words, and the details differ where the apps differ.
+      </p>
+      <a class="btn primary" href="homebase/privacy.html">HomeBase privacy policy</a>
+      <a class="btn ghost" href="homehealth/privacy.html">HomeHealth privacy policy</a>
     </div>
   </section>
 
@@ -171,12 +141,12 @@
       <span class="kicker">A note on safety</span>
       <h2>Reminders are ours. Safe conditions are yours.</h2>
       <p class="sub">
-        Many of the tasks HomeBase reminds you about — garage doors, pool chemicals,
-        vehicle fluids, electrical panels — involve real hazards, especially to children.
-        The usage guide includes plain-language
-        <a href="usage.html#child-safety" style="color:var(--green);font-weight:700">child-safety
-        warnings</a> for every one of them. Please read them before your first weekend of
-        checklist-clearing.
+        Many of the tasks our apps remind you about — garage doors, pool chemicals, vehicle
+        fluids, electrical panels — involve real hazards, especially to children. Each usage
+        guide includes plain-language child-safety warnings for every one of them
+        (<a href="homebase/usage.html#child-safety" style="color:var(--green);font-weight:700">HomeBase</a>,
+        <a href="homehealth/usage.html#child-safety" style="color:var(--green);font-weight:700">HomeHealth</a>).
+        Please read them before your first weekend of checklist-clearing.
       </p>
     </div>
   </section>
@@ -185,10 +155,9 @@
 
 <footer>
   <div class="wrap">
-    <span>HomeBase by Casa Health · offline home maintenance for Android</span>
+    <span>Casa Health · offline home maintenance for Android</span>
     <span class="spacer"></span>
-    <a href="usage.html">Usage guide</a>
-    <a href="privacy.html">Privacy policy</a>
+    <a href="#apps">Apps</a>
     <a href="support.html">Support</a>
   </div>
 </footer>

@@ -1,31 +1,56 @@
 # casahealth
 
-The public website for **Casa Health**, the publisher of the **HomeBase** Android app.
+The public website for **Casa Health**, publisher of the **HomeBase** and **HomeHealth** Android
+apps.
 
-Casa Health is the publisher; HomeBase is the app. The nav brand and the page footers say Casa
-Health, while the page titles and copy describe HomeBase. That split is deliberate — keep it.
+Casa Health is the publisher; HomeBase and HomeHealth are the apps. The nav brand and the page
+footers say Casa Health, while page titles and body copy name the specific app. That split is
+deliberate, and a blanket find/replace over these files will get it wrong.
 
-## What's here
+## Layout
 
-The site is plain, self-contained HTML and CSS. No build step, no CDNs, no JavaScript
-dependencies: system fonts only, and every link between pages is relative, so the whole thing
-works when opened from disk as well as when served.
+Shared pages live at the root; anything that makes a claim about a *specific* app lives in that
+app's folder.
 
-| File | Page |
-| --- | --- |
-| `index.html` | Landing page — what HomeBase is, and the offline-first model |
-| `usage.html` | How to use the app, including the child-safety section |
-| `privacy.html` | Privacy policy (the URL the Play Console listing points at) |
-| `support.html` | Support contact and common questions |
-| `styles.css` | Shared styles for all four pages |
+```
+index.html            Publisher landing page — lists every app
+support.html          One support page covering all apps
+styles.css            Shared stylesheet (all pages, both apps)
+homebase/
+  privacy.html        HomeBase privacy policy
+  usage.html          HomeBase usage guide
+homehealth/
+  privacy.html        HomeHealth privacy policy
+  usage.html          HomeHealth usage guide
+```
+
+**Privacy and usage are per-app on purpose, not just for tidiness.** The two policies differ on
+points that matter: HomeBase has a one-time in-app purchase and declares `INTERNET` partly to
+reach Google Play for purchase validation, whereas HomeHealth has no in-app purchases and
+declares `INTERNET` solely so the calendar-picker Intent works. A single shared policy would be
+factually wrong for one of the apps. Never merge them.
+
+The apps also have different floors: **HomeBase requires Android 8.0+** (`minSdk 26`),
+**HomeHealth requires Android 7.0+** (`minSdk 24`).
+
+## Adding an app
+
+1. Create `<app>/` with its own `privacy.html` and `usage.html`.
+2. In those pages, link shared assets with `../` (`../styles.css`, `../index.html`,
+   `../support.html`) and sibling pages flat (`usage.html`, `privacy.html`).
+3. Add a card to the `#apps` grid in `index.html` and to the documentation grid in
+   `support.html`.
 
 ## Publishing
 
-Served by GitHub Pages from the **`main` branch, `/` (root)**. Edit the HTML, commit, push — Pages
-redeploys on its own.
+Served by GitHub Pages from the **`main` branch, `/` (root)**. Edit, commit, push — Pages
+redeploys on its own. The site is plain self-contained HTML and CSS: no build step, no CDNs, no
+JavaScript, system fonts only, and all links relative, so it also works opened from disk.
 
-## Editing
+## Where the source pages came from
 
-This repo is the canonical copy of these pages. A copy also exists at `docs/` in the private
-`homebase` app repo, which is where they were originally written; if you change a page in one
-place, mirror it to the other or the two will drift apart.
+The HomeBase pages were written in the private `homebase` app repo under `docs/`, which still
+holds a copy; that repo is private, so Pages could never serve them from there. The HomeHealth
+pages came from the `homehealth` repo, which serves its own site at
+`dottedcrane.github.io/homehealth/` and is treated as read-only. Both origins still exist, so a
+page edited here must be mirrored there by hand or the copies drift.
