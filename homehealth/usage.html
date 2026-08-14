@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Usage Guide — HomeHealth</title>
-<meta name="description" content="How HomeHealth's maintenance hub works: build your home, let the checklist write itself, and maintain by season. Includes child-safety warnings for common maintenance tasks.">
+<meta name="description" content="How HomeHealth's maintenance hub works: build your home, let the To-Do list write itself, and maintain by season. Includes child-safety warnings for common maintenance tasks.">
 <link rel="stylesheet" href="../styles.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A1%3C/text%3E%3C/svg%3E">
 </head>
@@ -23,7 +23,7 @@
   <div class="page-head">
     <div class="wrap">
       <h1>Usage guide</h1>
-      <p>The 3D home is the map; the maintenance hub is the point. 
+      <p>The 3D home is the map; the maintenance hub is the point.
          Fully offline operation with minimal permissions — no camera, location, or
          contacts access. Here's how to get real value out of it.</p>
     </div>
@@ -34,127 +34,290 @@
   <div class="wrap">
 
     <h2>1. Getting started</h2>
-    <p>The app opens on a <strong>3D neighborhood</strong> — your own buildable lot plus five
-       model homes around a cul-de-sac (The Classic, The Estate, The Townhouse, The Ranch, and
-       The Penthouse condo tower). Tap any home to preview its exterior and floor plan, then
-       press <strong>Mine</strong> to claim it (or claim your own lot and build from scratch).
-       You'll be asked for the <strong>year built</strong> and <strong>year purchased</strong>.</p>
+    <p>The app opens on the <strong>neighborhood</strong> — your own lot plus five model homes
+       (The Classic, The Estate, The Townhouse, The Ranch, and The Penthouse condo tower)
+       gathered around a central green, with the main road looping around the outside of them
+       and footpaths running from each home to the park. Tap any home to preview its exterior
+       and floor plan, then press <strong>Mine</strong> to claim it — or claim your own lot
+       as-is. Either way you'll be asked for the <strong>year built</strong> and
+       <strong>year purchased</strong>.</p>
     <div class="callout">
       <strong>Enter those dates honestly.</strong> Every lifespan rating falls back to the
       build year when an item has no install year of its own — one accurate date instantly
       makes your whole inventory meaningful instead of generic.
     </div>
-    <p>Your home saves automatically on-device and reloads on every launch. No account,
-       nothing uploaded — see the <a href="privacy.html">privacy policy</a>.</p>
+    <p>Your claimed home saves automatically on-device and reloads every time you open the app.
+       There is no account and nothing is uploaded — see the
+       <a href="privacy.html">privacy policy</a>.</p>
 
-    <h2>2. The maintenance hub's model</h2>
-    <p>Open the hub from the <strong>wrench icon</strong>. Its whole philosophy fits in one
-       paragraph:</p>
+    <h2>2. The maintenance hub — how it actually works</h2>
+    <p>Open it with the <strong>wrench icon</strong> — it's on every scene: Exterior, Floor
+       Plan, Room, Driveway, Attic, and Neighborhood. The hub's model in one paragraph:</p>
     <div class="callout">
       <strong>What you build determines what you maintain.</strong> Tasks exist only for what
-      your home actually has — its style, exterior features, systems, room types, and parked
-      vehicles. Each physical thing is its own tracked instance with two independent signals:
-      an <strong>A/B/C lifespan rating</strong> (how far into its expected service life it is)
-      and a <strong>green / amber / red upkeep dot</strong> (whether its recurring maintenance
-      is current). Marking a task done never ends it — the next occurrence lands in the next
-      real calendar season.
+      your home actually has — its style, its exterior features (garage, pool, deck, yard),
+      its systems (HVAC, solar), the room types you've built, and the vehicles you've parked.
+      Add a pool and pool tasks appear; remove the deck and deck tasks disappear. Each physical
+      thing is tracked as its own instance with two independent signals: an
+      <strong>A/B/C lifespan rating</strong> (how far into its expected service life it is) and
+      a <strong>green / amber / red upkeep dot</strong> (whether its recurring maintenance is
+      current). Marking a task done never ends it — the next occurrence lands in the next real
+      calendar season.
     </div>
 
-    <h3>Checklist tab</h3>
+    <h3>The shortcut: status icons in the scene</h3>
+    <p>You rarely need to open the hub to answer "does anything here need me?". The
+       <strong>Room, Driveway, and Attic</strong> panes — all three the same pane now — each
+       carry a short strip of <strong>red / amber / green icons</strong>, one per thing in that
+       place with recurring upkeep, worst first. <strong>One tap opens that item's maintenance
+       card</strong>, which lists its due tasks with dates and a mark-done button beside each.</p>
     <ul>
-      <li>Tasks are sorted by due date and anchored to <strong>real seasons</strong>:
-          monthly tasks roll continuously; quarterly tasks anchor to March / June / September /
+      <li>Kitchen: fridge, dishwasher. Laundry: washer, dryer, water heater. Driveway: your
+          vehicles and the garage door. Attic: HVAC, ductwork, insulation, solar, EV battery —
+          with a second row beside it saying which of those your home actually has (see
+          <a href="#attic">3a</a>).</li>
+      <li>Rooms with nothing to maintain — most bedrooms and living rooms — show no strip at
+          all. That's expected, not a bug.</li>
+      <li><strong>Amber means "due soon <em>or</em> never done"</strong>, so a home you've just
+          claimed reads amber across the board. That's the "get started" state, not a
+          warning.</li>
+    </ul>
+    <p class="tip">Tip: this is the fastest way to record install years. Walk the house, tap
+       each coloured icon, fill in the year you remember. It beats scrolling the Score tab room
+       by room.</p>
+
+    <h3>To-Do tab</h3>
+    <ul>
+      <li>Each row is one line — priority dot, title, due label, check — <strong>tap it to open
+          the full detail</strong>: description, frequency/priority/cost chips, what it's
+          tracked against, and a <strong>View repair guide</strong> button when the task has
+          one.</li>
+      <li>Order is <strong>severity-weighted</strong>: the most overdue, highest-priority tasks
+          rise to the top; muted tasks always sink to the bottom. It's not simply
+          soonest-due-first.</li>
+      <li><strong>Snooze 14d</strong> (in the detail popup) pushes a task's due date out two
+          weeks without marking it done — use it for "I know, not this week."
+          <strong>Mute reminders</strong> stops a task competing for attention entirely while
+          keeping it visible in the list; un-mute any time.</li>
+      <li><strong>The list follows you.</strong> Standing in a room, on the driveway, or in the
+          attic scopes the list to that place's own tasks — a header names the scope and offers
+          <strong>Show all</strong> to see everything anyway. Exterior, Floor Plan, and
+          Neighborhood always show the full list.</li>
+      <li>Tasks are anchored to <strong>real seasons</strong>, not rolling countdowns: monthly
+          tasks roll continuously; quarterly tasks anchor to March / June / September /
           December; biannual to March + September; annual tasks to the single season that fits
           the job (water heater flush before winter, HVAC service before cooling season, boat
           winterization in October).</li>
-      <li><strong>Mark Done</strong> records today and recomputes the next due date.</li>
-      <li><strong>Add to calendar</strong> hands the task to your own calendar app,
-          pre-filled — you press save there. HomeHealth never touches your calendar itself.</li>
+      <li><strong>Mark Done</strong> (on the row, or in the detail popup) records today locally
+          and recomputes the next due date.</li>
+      <li><strong>Add to calendar</strong>, from the detail popup, hands the task to your own
+          calendar app, pre-filled — you press save there. The app itself never touches your
+          calendar.</li>
     </ul>
     <p class="tip">Tip: don't try to zero the list in one weekend. The seasonal anchors exist
-       so three or four tasks surface at a time — a green checklist in March says nothing
+       so three or four tasks surface at a time; a green To-Do list in March says nothing
        about September.</p>
+    <p class="tip">Tip: scoping means most single rooms show an empty state — that's expected.
+       Only the kitchen, laundry, and driveway carry place-attributable tasks; everything else
+       lives at the home level and shows up under Exterior / Floor Plan or via Show all.</p>
 
-    <h3>Inventory tab</h3>
+    <h3>Score tab</h3>
+    <p>Grouped so the actionable things sit on top:</p>
     <ul>
-      <li><strong>Needs Maintenance</strong> — every item with a recurring task, per room,
-          with both badges. Copies are independent: three bathrooms means "Toilet 1/2/3",
-          each with its own install year, rating, and documents.</li>
-      <li><strong>Vehicles</strong> — every car, boat, and motorcycle on your lot, tracked
-          individually ("Car 1", "Boat 1", …). Tap a row — or the vehicle itself in 3D —
-          to open its card.</li>
-      <li><strong>Structural</strong> — home-wide assets that aren't 3D objects: Roof,
-          Siding, Plumbing, and Electrical Panel always; Garage Door, Smoke &amp; CO
-          Detectors, Windows &amp; Doors, Fire Extinguisher, Deck, Lawn Equipment, Pool
-          Equipment, and Balcony when they apply to your home.</li>
-      <li><strong>Not in my home</strong> removes an item — and for structural assets also
-          drops its tasks from the Checklist entirely. Removed assets wait under
-          <strong>Available to Add</strong>; tap one to restore it.</li>
-      <li><strong>Other Items</strong> — tracked items with no recurring schedule; you can
-          still record an install year and condition.</li>
+      <li><strong>Needs Maintenance</strong> — every item with a recurring task, per room, with
+          both badges. Multiple copies are independent: three bathrooms means "Toilet 1/2/3",
+          each with its own install year and rating.</li>
+      <li><strong>Vehicles</strong> — every car, boat, and motorcycle parked on your lot,
+          tracked individually ("Car 1", "Boat 1", …). Tapping a row opens its card; tapping
+          the vehicle in 3D opens its actions bar instead (paint color, gas/electric, Track →
+          card, Remove).</li>
+      <li><strong>Structural</strong> — home-wide assets that aren't 3D objects: Roof, Siding,
+          Plumbing, and Electrical Panel always; Garage Door, Smoke &amp; CO Detectors,
+          Windows &amp; Doors, Fire Extinguisher, Deck, Lawn Equipment, Pool Equipment, and
+          Balcony when they apply to your home.</li>
+      <li><strong>Not in my home</strong> on any card removes the item — and for structural
+          assets also drops its tasks from the To-Do list entirely. Removed structural assets
+          wait in <strong>Available to Add</strong> at the bottom; tap to restore.</li>
+      <li><strong>Other Items</strong> — tracked items with no recurring schedule; tap to
+          record install year and condition anyway.</li>
     </ul>
-    <p class="tip">Tip: do one inventory pass, room by room — mark what you don't own and set
-       install years for the big-ticket items (water heater, HVAC, roof, appliances, car).
-       Fifteen minutes of setup turns the ratings from industry averages into your home's
-       truth.</p>
-    <p>Plain <strong>furniture is deliberately not tracked</strong> — sofas and desks are
-       décor you drag into rooms, not maintenance items. The hub's scope is upkeep.</p>
+    <p class="tip">Tip: work through the inventory once, room by room, marking what you don't
+       own and setting install years for big-ticket items (water heater, HVAC, roof,
+       appliances, car). Fifteen minutes of setup is what turns the ratings from generic
+       averages into your home's truth.</p>
+    <p>Note: plain <strong>furniture carries no recurring tasks</strong> — nothing about a sofa
+       or a desk needs doing on a schedule, so they never reach the To-Do list. They do appear
+       under <strong>Other Items</strong>, where an install year gives them a lifespan rating
+       like anything else.</p>
 
-    <h3>Guides tab</h3>
+    <h3>Guide tab</h3>
     <p>Step-by-step DIY guides (HVAC, Plumbing, Electrical, Exterior, Appliances) with warning
        signs, numbered steps, safety notes, and — read these — <strong>when to call a
        professional</strong>.</p>
+    <p class="tip">Tip: if a To-Do task already has a guide, its detail popup has a
+       <strong>View repair guide</strong> shortcut — no need to go hunting through this tab
+       first.</p>
 
     <h3>Pros tab</h3>
-    <p>Your own service contacts (name, trade, phone, email, notes), typed in by you and
-       stored only on-device.</p>
-    <p class="tip">Tip: add the tech's name right after a good service visit, and put what
-       they charged in the notes — future-you will thank you.</p>
+    <p>Your own list of service contacts (name, trade, phone, email, notes), typed in by you
+       and stored only on-device.</p>
+    <p class="tip">Tip: add the tech's name right after a good service visit, and in the notes
+       put what they charged — future-you will thank you.</p>
 
     <h3>Documents</h3>
     <p>Any item card can attach warranties, manuals, and receipts via the system file picker.
-       The app stores references, not copies, and includes the files in backups you export.</p>
+       <strong>Tap a document to open it</strong> in whatever app on your phone reads that file
+       type; the trash icon beside it deletes the attachment. The app stores references, not
+       copies, and includes the files in backups you export — after which it holds its own copy,
+       so the document keeps opening even if you move or delete the original.</p>
 
-    <h3>Backup &amp; restore</h3>
+    <h3>Backup &amp; restore (premium)</h3>
     <p>From the home icon: <strong>Backup App Data</strong> exports one <code>.zip</code>
        (database + documents) wherever you choose; <strong>Restore App Data</strong>
-       overwrites everything from a backup after confirmation, then restarts the app.</p>
-    <p class="tip">Tip: export a backup right after your initial inventory setup and after any
+       overwrites everything from a backup after confirmation, then restarts the app.
+       <strong>These two features require a one-time in-app purchase to unlock.</strong></p>
+    <p class="tip">Tip: export a backup right after your initial Score setup and after any
        big edit — the file is small, and restore is all-or-nothing.</p>
 
-    <h2>3. Vehicles and the garage</h2>
+    <h2>3. Vehicles and the driveway</h2>
     <ul>
-      <li>In the exterior view, <strong>long-press the car, boat, or motorcycle icon</strong>
-          in the bottom pane and drag it onto the lot. A car dropped on the garage parks
-          inside — the garage slot holds exactly one; everything else takes a free driveway
-          spot (vehicles never stack).</li>
-      <li><strong>Tap the garage door</strong> (or the garage slab in the floor plan) to step
-          into the <strong>garage scene</strong> — the door rolls open and a parked car pulls
-          out. Tap the door to close or open it, drag vehicles along the driveway, drag one to
-          the street end to remove it.</li>
-      <li>Every vehicle is a tracked instance: its card holds the year and documents, and its
-          tasks (oil / tires / fluids / service for cars; winterization and hull checks for
-          boats; oil-and-chain and season prep for motorcycles) join the Checklist
-          automatically.</li>
+      <li><strong>Vehicles are added on the driveway</strong>, not from the exterior. You walk
+          onto it like a room: the <strong>Garage icon</strong> in the exterior pane (next to
+          the Attic icon), the <strong>garage door</strong> in the exterior, or the
+          <strong>garage slab</strong> in the floor plan.</li>
+      <li>Once there, <strong>long-press the car, boat, or motorcycle icon</strong> and drag it
+          onto the lot. A car dropped on the garage parks inside — that slot holds exactly one;
+          everything else takes a free driveway spot (vehicles never stack). Tap the door to
+          close or open it — when it's open a lip stays showing at the top of the opening, so
+          you can close it without moving the camera; drag vehicles around the driveway; drag
+          one to the street end to remove it.</li>
+      <li><strong>Your cars stay where you put them, and show up everywhere.</strong> One lot in
+          real coordinates: the car halfway down the driveway is in the same spot in the
+          exterior, in the floor plan, and seen through the wall from inside the house. Only the
+          driveway lets you move them.</li>
+      <li><strong>The garage isn't just for cars.</strong> Its walls are see-through, so you can
+          see what's in there from outside. On the driveway, the tray offers what a garage holds
+          — water heater, spare fridge, washer, dryer, gym gear, keepsakes — and a drop lands
+          <em>inside</em> the garage, not on the tarmac. How much fits is the garage's own floor,
+          so another car never makes room for another freezer. If your garage is a room in the
+          floor plan (Townhouse, Classic), it's the same garage either way: drop something from
+          the driveway and you'll find it in the room, and vice versa.</li>
+      <li><strong>No garage? You still get the lot.</strong> A condo — which can own neither a
+          garage feature nor a garage room — parks in the open: the same lot, driveway, and
+          street, without a shell or overhead door, and its tray stays vehicles-only since
+          there's nothing to put a water heater in. The same goes for a house before you've
+          dragged a garage onto it. Every home can own and track vehicles.</li>
+      <li>Every vehicle is a tracked inventory instance: tapping it in 3D opens its actions bar
+          (paint color, gas/electric, Track → maintenance card, Remove).</li>
+      <li><strong>Each vehicle keeps its own schedule.</strong> Tasks are generated per vehicle
+          from that vehicle's own drivetrain, so a gas car and an EV in the same garage list
+          different work and completing one says nothing about the other. Titles are numbered
+          ("Car 1: …", "Car 2: …") when you own more than one of a kind.</li>
+      <li><strong>Switching a car to electric swaps only that car's tasks</strong>: oil &amp;
+          filter and battery &amp; fluids give way to an <strong>EV battery &amp; charging
+          check</strong> and <strong>brake fluid &amp; caliper service</strong> (regenerative
+          braking barely wears the pads, but calipers seize from disuse and the fluid still
+          ages). Tires and annual service are shared by both drivetrains. A motorcycle swaps
+          oil &amp; chain for a battery &amp; belt check. Anything already marked done keeps
+          its date.</li>
+    </ul>
+    <p class="tip">Tip: the coloured icons at the start of the garage pane are your vehicles
+       and the garage door, tinted by how current their upkeep is — one tap opens a card. The
+       plain icons after them are the drag tray, which places a new vehicle instead.</p>
+
+    <h2 id="attic">3a. The attic</h2>
+    <ul>
+      <li><strong>The attic is a place you walk into</strong>, reached by the
+          <strong>Attic icon</strong> — in the exterior pane, the floor plan's, and every
+          room's, so it's one tap from anywhere in the home. Back returns you where you came
+          from. Same pane, same camera presets, same maintenance strip as any room; orbit and
+          you're looking down at your own street.</li>
+      <li><strong>Attic or utility closet?</strong> Tap the <strong>bare attic floor</strong>
+          (or use the Home icon's dialog) to switch. A <strong>full attic</strong> is your whole
+          footprint — rafters, joists, a framed gable end at the far wall, ductwork, and
+          insulation batts either side of a boarded walkway you can stand on (and tap). A
+          <strong>utility closet</strong> is a small cupboard holding just the air handler.
+          Houses start as the first and condos as the second; change either any time. Your roof
+          still decides whether the space is pitched, so a condo's full attic is
+          flat-ceilinged.</li>
+      <li><strong>Choosing a closet never removes a task.</strong> It says what the
+          <em>space</em> is, not what your home has. What your home has is the
+          <strong>row of icons in the pane</strong> — HVAC, Ductwork, Insulation — tap one off
+          and it leaves your To-Do list, the Score tab and the attic itself; tap it back on and
+          it all returns, including anything you'd already marked done. Same toggles as the
+          hub's Score tab.</li>
+      <li><strong>Tap the floor hatch</strong> to close or reopen it. <strong>Tap any
+          item</strong> — air handler, a duct run, a batt — to open its maintenance card.</li>
+      <li><strong>Stash keepsakes up there</strong>: long-press <strong>Treasure</strong> in the
+          tray and drag it in, like furnishing a room. It's tracked under Custom in the hub's
+          Score tab, and a floor-plan edit downstairs can't delete it.</li>
+      <li><strong>Your things aren't deleted when the house changes.</strong> Remove a room,
+          shrink the floor plan, or claim a different model, and anything in it that was yours —
+          a keepsake, or anything with an install year or a document attached — moves to the
+          garage if a garage can hold it, and to the attic if not. It keeps its maintenance
+          history; only ordinary furniture goes with its room.</li>
     </ul>
 
     <h2>4. Building and furnishing the 3D home</h2>
     <ul>
-      <li><strong>Exterior:</strong> toggle features (garage / yard / pool / deck — tap again
-          to cycle sides) and systems (HVAC, solar). Tap the front door to go inside; tap the
-          HVAC unit or solar panels for their maintenance cards.</li>
+      <li><strong>Exterior pane:</strong> long-press a tray icon — garage, pool, deck, HVAC,
+          solar panel, EV battery, tree, gazebo — and drag it onto the yard to place it (solar
+          panels only while the camera's Angle is Top, for an unobstructed view of the roof).
+          Tap anything you've placed to Remove it or Track its maintenance (HVAC / solar / EV
+          battery jump straight to their own card; everything else opens the Hub); a pool can
+          also be rotated to the next side. The deck is always the full width of the back wall.
+          Tap the front door to go inside.</li>
       <li><strong>Floor plan:</strong> tap a room to step into it (works even when the tap
-          lands on furniture); long-press a room for options (enter / change type / remove).
-          Toggle the <strong>pencil</strong> for all plan editing — wall modes (Solid / Open /
-          Door / Window), selecting empty tiles to create rooms, and adding or removing
-          columns, rows, and floors; the gear icon stays camera-only. Adjacent rooms of the
-          same type merge automatically into one continuous space.</li>
-      <li><strong>Room view:</strong> long-press a furniture icon in the tray and drag it in;
-          tap placed furniture to rotate, flip, or remove it; long-press-drag to move it —
-          or drag it out through a wall to remove it. Appliances and fixtures are toggled
-          from the pane and tapped to open their maintenance cards. Positions persist
-          automatically.</li>
+          lands on furniture); long-press a room for options (enter / change type / reset).
+          Toggle the <strong>pencil</strong> for all editing — wall modes (Solid / Open /
+          Door / Window), selecting empty tiles to Create Room, adding or removing columns,
+          rows, and floors, and <strong>removing a room</strong>, which is offered nowhere
+          else; the gear icon stays camera-only. Adjacent rooms of the same type merge
+          automatically into one continuous space.</li>
+      <li><strong>Making space to build:</strong> every model ships with its floors completely
+          tiled, so there are no empty tiles to select at first. Add a column or a row (or
+          remove a room) to make space, then select it and Create Room. A 1×1 offers only a
+          foyer; 1×2 adds the narrow rooms — bathroom, laundry, pantry, storage, powder room —
+          and 1×3 opens the rest.</li>
+      <li><strong>Stairs and the garage:</strong> stairs can only be changed or removed with the
+          pencil on — every floor's flight sits directly above the one below, so altering a
+          single storey's would strand that floor. Tapping them still walks you in. The garage
+          opens the garage scene rather than a plain room: the overhead door and its upkeep, the
+          fleet, and whatever's stored behind the door, in the one place vehicles can be parked.
+          It can't be removed or retyped — it stays pinned to its corner of the ground
+          floor.</li>
+      <li><strong>Hallways:</strong> rooms like any other — walk in, furnish them with a console
+          or a bookshelf, change or remove them. A corridor is 1.4&nbsp;m wide against a room's
+          2&nbsp;m grid. Build a room that no corridor reaches and <strong>the home grows a
+          hallway to serve it</strong>: a new corridor is inserted beside it rather than existing
+          rooms being narrowed to make space, so nothing you already placed changes size. Closets
+          and pantries are the exception — they're entered through their bedroom or kitchen, so
+          they never trigger one.</li>
+      <li><strong>Room view:</strong> the tray offers the pieces that suit <em>this</em> room — a
+          kitchen its counters and appliances, a bathroom its fixtures — plus the sensible
+          crossovers (a garage fridge, a bathroom washer). Long-press an icon and drag it in; tap
+          placed furniture for rotate / flip / remove; long-press-drag to move it; drag it out
+          through a wall to remove. Positions persist automatically.</li>
+      <li><strong>Tap the bare floor</strong> for the room's card: change its type, or
+          <strong>Reset</strong> it to the furniture it started with. A reset also brings back
+          anything you'd marked "not in my home" here. Nothing you're tracking is lost — an
+          appliance with an install year or an attached document hands its history to its
+          replacement, and a keepsake with nowhere to go moves to the garage or the attic.</li>
+      <li>Each tray icon shows a <strong>×N count</strong> of what the room holds and
+          <strong>dims when the room is full</strong>. The cap is floor space, not a fixed
+          number: a small bedroom takes one bed where a large one takes three. The first of
+          anything always fits, however tight the room. <strong>All items</strong> at the end of
+          the tray reveals everything the filter left out, so nothing is ever out of reach.</li>
+      <li>A room's <strong>walls are see-through</strong>, and the <strong>rest of the storey is
+          drawn around it</strong> — every other room at its true position with knee-high walls
+          and ghosted furniture — with your street, the park and the model homes beyond the
+          home's boundary. Orbiting shows where you're standing; from upstairs you look down on
+          the neighborhood. All of it is scenery: it can't be tapped or edited, and furniture
+          dropped over any of it still lands in the room you're in.</li>
     </ul>
+    <p class="tip">Tip: the coloured icons above the tray are a different thing entirely — they
+       open maintenance cards (see section 2). The tray's room-coloured icons place and remove
+       furniture.</p>
 
     <h2>5. Camera</h2>
     <table>
@@ -162,9 +325,21 @@
       <tr><td>1-finger drag</td><td>Orbit (or pan, in Map mode)</td></tr>
       <tr><td>2-finger pinch</td><td>Zoom</td></tr>
       <tr><td>2-finger drag</td><td>Pan</td></tr>
+      <tr><td>Press and hold an object, then drag</td><td>Move it</td></tr>
     </table>
-    <p>Every scene's <strong>gear</strong> has its own camera settings, remembered per scene.
-       The room view adds angle presets: Eye (doorway), Corner (whole room), Top (overhead).</p>
+    <p>Moving something is always a <em>hold, then drag</em> — a short buzz tells you it's
+       picked up, and it follows your finger from there. Dragging without holding first just
+       looks around instead, so you can never nudge the furniture by accident while turning the
+       camera.</p>
+    <p>Every scene's <strong>gear</strong> has its own settings (Orbit/Pan mode, gesture
+       toggles, sensitivity, Reset view) and its own <strong>angle presets</strong>, all
+       remembered per scene:</p>
+    <ul>
+      <li><strong>Side</strong> — the oblique 3D overview. Every scene has one.</li>
+      <li><strong>Top</strong> — straight down, floor-plan style. Best for placing things
+          accurately.</li>
+      <li><strong>Eye</strong> — standing inside at eye level. Room and garage scenes only.</li>
+    </ul>
 
     <h2>Safety</h2>
 
@@ -212,6 +387,9 @@
       <li><strong>Electrical panels, HVAC, and solar</strong> — adult-only and, in most
           cases, professional-supervised. Keep panel access restricted at all times.</li>
     </ul>
+    <p>The DIY guides are informational only — follow manufacturer instructions and local codes,
+       and when in doubt (especially with electrical, gas, or structural work), use the
+       <strong>Pros</strong> tab for what it's for.</p>
 
   </div>
 </article>

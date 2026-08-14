@@ -24,14 +24,18 @@ homehealth/
   usage.html          HomeHealth usage guide
 ```
 
-**Privacy and usage are per-app on purpose, not just for tidiness.** The two policies differ on
-points that matter: HomeBase has a one-time in-app purchase and declares `INTERNET` partly to
-reach Google Play for purchase validation, whereas HomeHealth has no in-app purchases and
-declares `INTERNET` solely so the calendar-picker Intent works. A single shared policy would be
-factually wrong for one of the apps. Never merge them.
+**Privacy and usage are per-app on purpose, not just for tidiness.** Each policy has to speak
+for exactly one app — it names that app, describes that app's storage and permissions, and is
+the URL given on that app's Play listing. A merged policy could not do that without hedging
+every sentence about which app it meant, and any later divergence would silently make it wrong
+for one of them. Never merge them.
 
-The apps also have different floors: **HomeBase requires Android 8.0+** (`minSdk 26`),
-**HomeHealth requires Android 7.0+** (`minSdk 24`).
+What differs today: **HomeBase requires Android 8.0+** (`minSdk 26`), **HomeHealth requires
+Android 7.0+** (`minSdk 24`); and the two one-time purchases unlock different things —
+HomeHealth's unlocks backup &amp; restore. Both apps declare `INTERNET` for the same two
+reasons (the calendar-picker Intent, and Google Play for purchase validation), so that is no
+longer a point of difference — it used to be, and this README said so for longer than it was
+true.
 
 ## Adding an app
 

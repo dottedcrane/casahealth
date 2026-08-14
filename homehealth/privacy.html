@@ -23,9 +23,11 @@
   <div class="page-head">
     <div class="wrap">
       <h1>Privacy policy</h1>
-      <p>Effective July 11, 2026 · The short version: <strong>there is no account, no server,
+      <p>Effective August 14, 2026 · The short version: <strong>there is no account, no server,
          no analytics, and no data collection.</strong> Everything you enter stays in the
-         app's private storage on your device and leaves only when <em>you</em> export it.</p>
+         app's private storage on your device and leaves it only when <em>you</em> export a
+         backup, or when Android's own device backup includes the app under settings you
+         control.</p>
     </div>
   </div>
 </header>
@@ -43,6 +45,8 @@
       <li>Home style, floor plan, exterior features (garage, pool, deck, yard), and systems
           (HVAC, solar).</li>
       <li>Furniture and vehicle placements, rotations, and positions.</li>
+      <li>The name you give the home ("My Home" unless you change it) and which model you
+          claimed.</li>
     </ul>
 
     <h3>Maintenance hub data</h3>
@@ -53,15 +57,25 @@
       <li>Per-item install years for appliances, fixtures, structural assets, and vehicles.</li>
       <li>Task completion dates ("Mark Done" timestamps) used to compute the next seasonal due
           date and the green/amber/red upkeep status.</li>
+      <li>Per-task snooze and mute state, set from a task's detail popup in the To-Do tab.</li>
       <li>Which items you've marked "not in my home."</li>
+      <li>Free-text <strong>notes</strong> you type on any item's maintenance card.</li>
+      <li><strong>Custom appliances</strong> you name yourself and the <strong>custom
+          tasks</strong> you define for them, including the titles, schedules, and priorities
+          you give them.</li>
     </ul>
 
     <h3>Documents you attach</h3>
     <p>Warranties, manuals, and receipts are attached through Android's system file picker
        (Storage Access Framework). The app stores a <em>reference</em> (a persistable URI)
        plus the display name — it can read only the specific files you picked, and only to
-       display them or include them in a backup you request. It never scans, copies, or
-       requests broad access to your storage.</p>
+       display them or include them in a backup you request. It never scans your storage, and
+       never requests broad access to it.</p>
+    <p><strong>Exporting a backup makes the app its own copy.</strong> So that a backup is
+       complete and stays readable, the export step copies each attached file into the app's
+       private storage and points the record at that copy — which is also why the document
+       keeps opening if you later move or delete the original. Those copies live in the same
+       private storage as everything else and are removed when you uninstall.</p>
 
     <h3>Pro contacts</h3>
     <p>The Pros tab stores service contacts (name, trade, phone, email, notes) <strong>that
@@ -76,14 +90,22 @@
       <li>No account, sign-in, email address, or other personally identifying information is
           requested.</li>
       <li>No location, camera, microphone, or contact-book access.</li>
-      <li>No data is transmitted off your device by this app, at any time, for any reason.</li>
+      <li>No data about you, your home, your tasks, or your contacts is ever transmitted off
+          your device. The app's only network traffic is to the Google Play Store to validate a
+          purchase, and it carries none of the data listed above (see <strong>Network</strong>
+          below).</li>
     </ul>
 
     <h2>Network</h2>
-    <p>The app declares the standard <code>INTERNET</code> permission solely so the system
-       calendar-picker Intent works on all devices. The app itself makes <strong>no network
-       requests</strong>, has no background sync, and sends no push notifications. It is fully
-       functional in airplane mode.</p>
+    <p>The app declares the standard <code>INTERNET</code> permission for two reasons:</p>
+    <ol>
+      <li>So the system calendar-picker Intent works on all devices.</li>
+      <li>To communicate securely with the <strong>Google Play Store</strong> for in-app
+          purchase validation and localized pricing.</li>
+    </ol>
+    <p>The app itself makes <strong>no other network requests</strong>, has no background sync,
+       and sends no push notifications. It remains fully functional in airplane mode (except
+       for processing new purchases).</p>
 
     <h2>Calendar</h2>
     <p>"Add to calendar" hands the task's title, description, and due date to <strong>your own
@@ -91,7 +113,7 @@
        app's action, under its own account and permissions. HomeHealth never reads your
        calendar and holds no calendar permission.</p>
 
-    <h2>Backups — the only way data leaves the app</h2>
+    <h2>Backups — the ways data can leave the app</h2>
     <ul>
       <li><strong>Backup App Data</strong> writes a single <code>.zip</code> — your home
           database, maintenance records, pro contacts, and attached documents — to a location
@@ -108,11 +130,11 @@
 
     <h2>Children's privacy</h2>
     <p>HomeHealth is intended for adult homeowners and renters managing home maintenance. It
-       is not directed at children, does not knowingly collect personal information from
-       anyone — including children under 13 — and contains no ads, in-app purchases, chat,
-       social features, or any other mechanism that could solicit information from a child.
-       Because the app has no collection or transmission of any kind, there is no child data
-       to collect, sell, or share.</p>
+       is not directed at children and does not knowingly collect personal information from
+       anyone — including children under 13. While the app includes a one-time in-app purchase
+       to unlock premium features, it contains no ads, chat, social features, or any other
+       mechanism that could solicit information from a child. Because the app has no tracking
+       or data collection, there is no child data to collect, sell, or share.</p>
     <div class="callout warn">
       Physical safety matters more here than data: many maintenance tasks the app reminds you
       about (garage doors, pool chemicals, power tools, vehicle fluids) are hazardous to
