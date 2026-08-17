@@ -162,6 +162,19 @@
        under <strong>Other Items</strong>, where an install year gives them a lifespan rating
        like anything else.</p>
 
+    <h3>What a card records</h3>
+    <p>Every item's card holds its <strong>install year</strong>, free-text <strong>Notes</strong>,
+       and attached <strong>Documents</strong>. Appliances also get a <strong>Brand</strong>,
+       <strong>Model</strong> and <strong>Serial</strong> — the details you need when ordering a
+       part, checking a warranty, or telling a tech what you have. Brand offers a short list of the
+       makes that actually build that kind of thing, and you can type in anything not on it.</p>
+    <p>Furniture has no brand fields: nothing about a sofa's nameplate needs maintaining.
+       Structural assets (Roof, Siding, Plumbing) and the home systems keep install year, notes and
+       documents.</p>
+    <p><em>Tip: put the model number in while the appliance is in front of you — it's the one thing
+       that's genuinely annoying to go and look up later, usually on a sticker behind or underneath
+       the unit.</em></p>
+
     <h3>Your own appliances and tasks</h3>
     <p>The built-in inventory can't know about your water softener or your espresso machine, so
        you can add both the thing and the work it needs.</p>
@@ -208,6 +221,10 @@
        (database + documents) wherever you choose; <strong>Restore App Data</strong>
        overwrites everything from a backup after confirmation, then restarts the app.
        <strong>These two features require a one-time in-app purchase to unlock.</strong></p>
+    <p><strong>Restore checks the file before it changes anything.</strong> If you pick a
+       <code>.zip</code> that isn't a HomeHealth backup — another app's export, or one made by a
+       newer version of HomeHealth — it says so and stops, and your current data is left exactly as
+       it was. Nothing is deleted until a backup has been read and accepted.</p>
     <p class="tip">Tip: export a backup right after your initial Score setup and after any
        big edit — the file is small, and restore is all-or-nothing.</p>
 
@@ -328,8 +345,19 @@
       <li><strong>Room view:</strong> the tray offers the pieces that suit <em>this</em> room — a
           kitchen its counters and appliances, a bathroom its fixtures — plus the sensible
           crossovers (a garage fridge, a bathroom washer). Long-press an icon and drag it in; tap
-          placed furniture for rotate / flip / remove; long-press-drag to move it; drag it out
-          through a wall to remove. Positions persist automatically.</li>
+          placed furniture for rotate / finish / brand / install year / remove; long-press-drag to
+          move it; drag it out through a wall to remove. Positions persist automatically.</li>
+      <li><strong>The actions bar on a placed item</strong> carries three compact controls beside
+          Rotate, so the things worth recording about a fridge can be set while you're standing in
+          front of it: a <strong>finish swatch</strong> (tap to cycle the body colour — woods for
+          furniture, stainless / white / black / slate for appliances); a <strong>two-letter brand
+          chip</strong> on appliances (tap to cycle the makes that actually build that kind of
+          thing — a microwave offers Panasonic and Toshiba, a range hood offers Broan and Zephyr, a
+          toilet offers Kohler and Toto — long-press for the full list; furniture has no brand
+          chip); and a <strong>two-digit install-year chip</strong> that reads
+          <code>&ndash;&ndash;</code> until set, then stamps this year on the first tap and walks
+          back a year on each further tap, stopping at the year the home was built. Long-press it
+          to open the item's card, where the year is shown in full.</li>
       <li><strong>Tap the bare floor</strong> for the room's card: change its type, or
           <strong>Reset</strong> it to the furniture it started with. A reset also brings back
           anything you'd marked "not in my home" here. Nothing you're tracking is lost — an

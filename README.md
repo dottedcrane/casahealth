@@ -30,12 +30,15 @@ the URL given on that app's Play listing. A merged policy could not do that with
 every sentence about which app it meant, and any later divergence would silently make it wrong
 for one of them. Never merge them.
 
-What differs today: **HomeBase requires Android 8.0+** (`minSdk 26`), **HomeHealth requires
-Android 7.0+** (`minSdk 24`); and the two one-time purchases unlock different things —
-HomeHealth's unlocks backup &amp; restore. Both apps declare `INTERNET` for the same two
-reasons (the calendar-picker Intent, and Google Play for purchase validation), so that is no
-longer a point of difference — it used to be, and this README said so for longer than it was
-true.
+What differs today: the two one-time purchases unlock different things — HomeHealth's
+unlocks backup &amp; restore. Both apps now require **Android 8.0+** (`minSdk 26`) and both
+declare `INTERNET` for the same two reasons (the calendar-picker Intent, and Google Play for
+purchase validation), so neither is a point of difference any more — both used to be, and this
+README said so for longer than it was true in each case.
+
+The policies stay separate regardless. They are kept apart because each is the URL on one app's
+Play listing and must describe that app's storage without hedging, not because the two happen to
+differ on any particular line today.
 
 ## Adding an app
 
